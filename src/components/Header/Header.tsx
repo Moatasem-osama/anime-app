@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="fixed top-0 left-0 w-full text-white shadow-sm">
+    <header className="fixed top-0 left-0 w-full text-white shadow-sm z-50">
       <div className="container mx-auto p-4">
         <div className="flex justify-between items-center ">
           <Link href={"/"} className="">
@@ -35,7 +35,7 @@ export default function Header() {
             }
           </button>
           {isOpen && (
-            <ul className="flex flex-col space-y-4 md:hidden absolute top-18 items-center justify-center left-0 w-full  p-4 shadow-md bg-black/60">
+            <ul className="flex flex-col space-y-4 md:hidden absolute top-10 items-center justify-center left-0 w-full  p-4 shadow-md bg-black/60">
               <li>
                 <Link className="text-white Capitalize " href={"/"}>
                   Home
@@ -47,8 +47,8 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link className="text-white Capitalize " href={"/products"}>
-                  Products
+                <Link className="text-white Capitalize " href={"/animeList"}>
+                  animeList
                 </Link>
               </li>
             </ul>
@@ -65,8 +65,8 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link className="text-white Capitalize " href={"/products"}>
-                Products
+              <Link className="text-white Capitalize " href={"/animeList"}>
+                animeList
               </Link>
             </li>
           </ul>
