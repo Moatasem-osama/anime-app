@@ -5,10 +5,10 @@ export default function Home() {
   const transparentIndex = 4;
   return (
   <section className="min-h-screen bg-cover bg-center bg-[url(/bg.png)]">
-    <div className="flex items-center justify-between min-h-screen bg-black/85 bg-opacity-50 text-white text-center p-4">
+    <div className="flex items-center justify-between min-h-screen bg-black/60 bg-opacity-50 text-white text-center p-4">
       <article className="w-full md:w-1/2 text-left p-4 space-y-4">
         <span>Season 1  |  2020</span>
-      <h1 className="text-5xl font-bold mb-4">JUJUTSU JAISEN</h1>
+      <h1 className="text-5xl font-bold my-4">JUJUTSU JAISEN</h1>
        <div className="flex gap-2">
       {[...Array(totalStars)].map((_, i) => (
         <FaStar
