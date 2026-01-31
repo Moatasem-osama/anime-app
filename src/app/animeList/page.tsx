@@ -66,7 +66,7 @@ type Anime = {
   url: string;
   images: {
     webp: {
-      image_url: string;
+      large_image_url: string;
     };
   };
   genres?: { name: string }[];
@@ -106,7 +106,7 @@ export default function AnimeList() {
 
   return (
     <section className="py-14">
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="container px-4 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {data.map((item) => (
           <Link
             key={item.mal_id}
@@ -115,11 +115,11 @@ export default function AnimeList() {
           >
             {/* Background Image */}
             <div
-              className="w-full h-50 bg-cover bg-center relative"
-              style={ {backgroundImage: `url(${item.images.webp.image_url})`} }
+              className="w-full h-100 bg-cover bg-center relative"
+              style={ {backgroundImage: `url(${item.images.webp.large_image_url})`} }
             >
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/30"></div>
+              {/* <div className="absolute inset-0 bg-black/30"></div> */}
 
               {/* Rating Stars */}
               <div className="absolute top-3 left-3">
